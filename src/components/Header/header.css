@@ -1,0 +1,66 @@
+#header {
+  width: 100%;
+  max-width: 1440px;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  margin: auto;
+}
+
+.logoContainer img {
+  height: 100px;
+  width: auto;
+}
+
+nav ul {
+  display: flex;
+  column-gap: 60px;
+}
+
+nav ul li {
+  list-style-type: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+  text-decoration-color: #eeb528;
+  text-decoration-thickness: 3px;
+}
+
+.checkout {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkout span {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background-color: #eeb528;
+  color: white;
+}
+
+.checkout:hover::after {
+  content: "Checkout";
+  position: absolute;
+  left: -10px;
+  bottom: -25px;
+  font-size: 14px;
+}
+
+@media (max-width: 748px) {
+  nav {
+    display: flex;
+    column-gap: 15px;
+  }
+
+  .logoContainer img {
+    height: 80px;
+  }
+}
