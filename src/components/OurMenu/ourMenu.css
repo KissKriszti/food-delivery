@@ -1,7 +1,7 @@
 #menu {
   width: 100%;
   max-width: 1440px;
-  height: 100vh;
+  height: auto;
   padding: 20px 40px;
   margin: auto;
 }
@@ -37,4 +37,66 @@
 .showMoreContainer button:hover {
   background-color: #eeb528;
   color: white;
+}
+
+.foodContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.foodCard {
+  height: 350px;
+  width: 250px;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  line-height: 40px;
+}
+
+.foodCard:hover {
+  border: 3px solid #eeb528;
+}
+
+.foodCard img {
+  height: 150px;
+  width: auto;
+}
+
+.foodCard h4 {
+  font-size: 23px;
+}
+
+.foodCard h5 {
+  font-size: 23px;
+  font-weight: bold;
+  color: #eeb528;
+}
+
+.shopping {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.shopCount {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.shopCount p {
+  font-size: 22px;
+}
+
+.toCart {
+  padding: 5px 6px;
+  background-color: #eeb528;
+  border-radius: 20px;
 }
