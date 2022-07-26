@@ -5,7 +5,7 @@ import Checkout from './Checkout';
 import MenuIcon from '@mui/icons-material/Menu';
 import './header.css';
 
-export default function Header({ dimensions, order }) {
+export default function Header({ dimensions, order, setOpenForm }) {
 
     const [isMenuShown, setIsMenuShown] = useState(false);
 
@@ -26,11 +26,12 @@ export default function Header({ dimensions, order }) {
                         <button onClick={showNavMenu}>
                             <MenuIcon sx={{ fontSize: 25 }} />
                         </button>
-                        <Checkout />
+                        <Checkout setOpenForm={setOpenForm} order={order} />
+                        {isMenuShown && <NavMenu />}
                     </>
                 }
             </nav>
-            {dimensions > 748 && <Checkout order={order} />}
+            {dimensions > 748 && <Checkout order={order} setOpenForm={setOpenForm} />}
         </section>
     )
 }

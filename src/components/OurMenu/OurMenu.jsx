@@ -2,7 +2,6 @@ import SuccessAlert from './SuccessAlert';
 import { useState } from 'react';
 import { foodMenuList } from '../../constants/foodMenuList';
 import FilterListIcon from '@mui/icons-material/FilterList';
-import { amber } from '@mui/material/colors';
 import MenuList from './MenuList';
 import Filter from './Filter';
 import './ourMenu.css';

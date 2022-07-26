@@ -44,3 +44,9 @@ a {
   position: relative;
   top: 13px;
 }
+
+@media (max-width: 786px) {
+  .contactContainer {
+    justify-content: flex-start;
+  }
+}

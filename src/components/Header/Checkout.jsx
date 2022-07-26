@@ -1,6 +1,6 @@
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
-export default function Checkout({ order }) {
+export default function Checkout({ order, setOpenForm }) {
 
     let totalItems = 0
 
@@ -9,7 +9,7 @@ export default function Checkout({ order }) {
     }
 
     return (
-        <div className='checkout'>
+        <div className='checkout' onClick={() => setOpenForm(true)}>
             <ShoppingCartCheckoutIcon sx={{ fontSize: 25 }} />
             <span>{totalItems}</span>
         </div>
