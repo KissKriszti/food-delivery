@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import ServicePage from "./components/ServicePage/ServicePage";
 import OurMenu from "./components/OurMenu/OurMenu";
+import Contacts from "./components/Contacts/Contacts";
 
 function App() {
   const [dimensions, setDimensions] = useState(window.innerWidth);
@@ -22,6 +23,7 @@ function App() {
       <WelcomePage />
       <ServicePage />
       <OurMenu setOrder={setOrder} dimensions={dimensions} />
+      <Contacts />
     </div>
   );
 }

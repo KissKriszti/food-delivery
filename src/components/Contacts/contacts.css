@@ -1,0 +1,46 @@
+#contact {
+  width: 100%;
+  height: auto;
+  background-color: #eeb528;
+}
+
+.contactContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 30px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 50px;
+  margin: auto;
+  background-color: transparent;
+}
+
+.contactContainer h4 {
+  font-size: 19px;
+  background-color: #eeb528;
+}
+
+.leftContainer,
+.rightContainer {
+  line-height: 30px;
+}
+
+.leftContainer,
+.rightContainer,
+.leftContainer h5,
+.rightContainer p,
+.rightContainer button,
+a {
+  background-color: #eeb528;
+}
+
+.rightContainer input {
+  padding: 10px 30px;
+  border-radius: 10px 0 0 10px;
+}
+
+.rightContainer button {
+  position: relative;
+  top: 13px;
+}
