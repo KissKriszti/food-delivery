@@ -7,6 +7,8 @@ import OurMenu from "./components/OurMenu/OurMenu";
 function App() {
   const [dimensions, setDimensions] = useState(window.innerWidth);
 
+  const [order, setOrder] = useState([]);
+
   useEffect(() => {
     function handleResize() {
       setDimensions(window.innerWidth);
@@ -16,10 +18,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header dimensions={dimensions} />
+      <Header dimensions={dimensions} order={order} />
       <WelcomePage />
       <ServicePage />
-      <OurMenu />
+      <OurMenu setOrder={setOrder} />
     </div>
   );
 }

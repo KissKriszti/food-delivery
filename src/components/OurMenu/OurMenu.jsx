@@ -1,10 +1,30 @@
+import SuccessAlert from './SuccessAlert';
+import { useState } from 'react';
 import { foodMenuList } from '../../constants/foodMenuList';
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
-import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import MenuList from './MenuList';
 import './ourMenu.css';
 
-export default function OurMenu() {
+export default function OurMenu({ setOrder }) {
+
+    const [showMoreFood, setShowMoreFood] = useState(false);
+    const [isSuccessMsg, setIsSuccessMsg] = useState(false);
+    const [filteringCategory, setFilteringCategory] = useState("");
+
+    const shortMenuList = foodMenuList.slice(0, 10);
+    const fullMenuFilter = foodMenuList.filter(item => item.category === filteringCategory)
+
+    const categories = [];
+
+    categories.push("All")
+
+    foodMenuList.map(({ category }) => !categories.includes(category) && categories.push(category));
+
+    function addToCartMsg() {
+        setIsSuccessMsg(true);
+        setTimeout(() => {
+            setIsSuccessMsg(false)
+        }, 2500)
+    };
 
     return (
         <section id="menu">
@@ -12,29 +32,25 @@ export default function OurMenu() {
                 <h4>OUR MENU</h4>
                 <h2>The Most Popular</h2>
             </div>
-            <div className='filteringOptions'></div>
-            <div className='foodContainer'>
-                {foodMenuList.map(({ id, image, name, price }) => (
-                    <div className='foodCard' key={id}>
-                        <img src={image} alt={image} />
-                        <h4>{name}</h4>
-                        <h5>{price}</h5>
-                        <div className='shopping'>
-                            <div className='shopCount'>
-                                <button><RemoveIcon sx={{ fontSize: 25 }} /></button>
-                                <p>0</p>
-                                <button><AddIcon sx={{ fontSize: 25 }} /></button>
-                            </div>
-                            <button className='toCart'>
-                                <ShoppingCartCheckoutIcon sx={{ fontSize: 19, backgroundColor: "#eeb528" }} />
-                            </button>
-                        </div>
+            <div className='filteringOptions'>
+                {categories.map((item, index) => (
+                    <div className='filterCard' key={index}>
+                        <button onClick={() => setFilteringCategory(() => item === "All" ? "" : item)}>{item}</button>
                     </div>
                 ))}
             </div>
-            <div className='showMoreContainer'>
-                <button>Show More</button>
+            <div className='foodContainer'>
+                <MenuList
+                    foodList={filteringCategory ? fullMenuFilter : (showMoreFood ? foodMenuList : shortMenuList)} addToCartMsg={addToCartMsg}
+                    setOrder={setOrder} />
             </div>
+            <div className='showMoreContainer'>
+                {!filteringCategory &&
+                    <button onClick={() => setShowMoreFood(prev => !prev)}>{showMoreFood ? 'Show Less' : 'Show More'}</button>
+                }
+            </div>
+            {isSuccessMsg && <SuccessAlert />}
         </section>
     )
 }
+

@@ -5,7 +5,7 @@ import Checkout from './Checkout';
 import MenuIcon from '@mui/icons-material/Menu';
 import './header.css';
 
-export default function Header({ dimensions }) {
+export default function Header({ dimensions, order }) {
 
     const [isMenuShown, setIsMenuShown] = useState(false);
 
@@ -30,7 +30,7 @@ export default function Header({ dimensions }) {
                     </>
                 }
             </nav>
-            {dimensions > 748 && <Checkout />}
+            {dimensions > 748 && <Checkout order={order} />}
         </section>
     )
 }
