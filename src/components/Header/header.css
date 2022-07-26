@@ -23,6 +23,7 @@ nav ul li {
   list-style-type: none;
   font-size: 17px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 nav ul li:hover {

@@ -1,0 +1,126 @@
+#home {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: 85vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  margin: auto;
+}
+
+.welcomeTextContainer {
+  padding-right: 50px;
+  line-height: 80px;
+}
+
+.welcomeTextContainer h1 {
+  font-size: 60px;
+}
+
+.welcomeTextContainer span {
+  color: #eeb528;
+}
+
+.welcomeTextContainer p {
+  margin: 20px 0;
+  line-height: 35px;
+}
+
+.welcomeTextContainer p,
+.welcomeTextContainer button {
+  font-size: 25px;
+}
+
+.welcomeTextContainer button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-bottom: 60px;
+  background-color: #eeb528;
+  color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.welcomeTextContainer button:hover {
+  background-color: #f0b010;
+}
+
+.socialMediaIcons {
+  display: flex;
+  column-gap: 15px;
+}
+
+.socialIcon {
+  padding: 8px;
+  border-radius: 8px;
+  color: black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.socialIcon:hover {
+  background-color: #eeb528;
+}
+
+.welcomePicContainer {
+  position: relative;
+}
+
+.welcomePicContainer img {
+  height: 600px;
+  width: 700px;
+  border-radius: 300px 50px 100px 50px;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  #home {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 30px;
+    padding: 40px;
+  }
+
+  .welcomePicContainer img {
+    width: 100%;
+    border-radius: 100px;
+  }
+
+  .welcomeTextContainer {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .socialMediaIcons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .welcomePicContainer img {
+    max-height: 300px;
+    width: auto;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .welcomePicContainer img {
+    height: 200px;
+  }
+
+  .welcomeTextContainer {
+    line-height: 60px;
+  }
+
+  .welcomeTextContainer h1 {
+    font-size: 40px;
+  }
+
+  .welcomeTextContainer p,
+  .welcomeTextContainer button {
+    font-size: 18px;
+  }
+}

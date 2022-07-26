@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header/Header";
+import WelcomePage from "./components/WelcomePage/WelcomePage";
 
 function App() {
   const [dimensions, setDimensions] = useState(window.innerWidth);
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <Header dimensions={dimensions} />
+      <WelcomePage />
     </div>
   );
 }
