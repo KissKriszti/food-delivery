@@ -56,6 +56,9 @@
 }
 
 @media (max-width: 1150px) {
+  #services {
+    height: auto;
+  }
   .serviceCard {
     margin-bottom: 30px;
   }

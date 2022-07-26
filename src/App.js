@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header/Header";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import ServicePage from "./components/ServicePage/ServicePage";
+import OurMenu from "./components/OurMenu/OurMenu";
 
 function App() {
   const [dimensions, setDimensions] = useState(window.innerWidth);
@@ -18,6 +19,7 @@ function App() {
       <Header dimensions={dimensions} />
       <WelcomePage />
       <ServicePage />
+      <OurMenu />
     </div>
   );
 }

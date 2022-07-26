@@ -11,7 +11,7 @@ export default function ServicePage() {
             <div className='serviceContainer'>
                 {servicesList.map(item => (
                     <div className='serviceCard' key={item.id}>
-                        <img src={item.image} alt="service image" />
+                        <img src={item.image} alt="service" />
                         <h4>{item.title}</h4>
                         <p>{item.desc}</p>
                     </div>

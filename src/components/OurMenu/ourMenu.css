@@ -1,0 +1,40 @@
+#menu {
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  padding: 20px 40px;
+  margin: auto;
+}
+
+.menuTitle {
+  margin-bottom: 100px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.menuTitle h4 {
+  color: #eeb528;
+  letter-spacing: 5px;
+}
+
+.menuTitle h2 {
+  font-size: 40px;
+}
+
+.showMoreContainer {
+  text-align: center;
+}
+
+.showMoreContainer button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-bottom: 60px;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+}
+
+.showMoreContainer button:hover {
+  background-color: #eeb528;
+  color: white;
+}
