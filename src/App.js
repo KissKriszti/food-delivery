@@ -21,7 +21,7 @@ function App() {
       <Header dimensions={dimensions} order={order} />
       <WelcomePage />
       <ServicePage />
-      <OurMenu setOrder={setOrder} />
+      <OurMenu setOrder={setOrder} dimensions={dimensions} />
     </div>
   );
 }

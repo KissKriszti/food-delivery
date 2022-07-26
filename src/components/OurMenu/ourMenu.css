@@ -137,3 +137,50 @@
 .filteringOptions button:hover {
   background-color: #eeb528;
 }
+
+@media (max-width: 660px) {
+  .filteringOptions {
+    justify-content: flex-start;
+  }
+
+  .menuTitle {
+    margin-bottom: 50px;
+  }
+
+  .filterButton {
+    padding: 5px 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .filterButton:hover {
+    background-color: #eeb528;
+  }
+
+  .smallFilter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  .filteringOptions button {
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .filteringOptions button:hover {
+    background-color: #eeb528;
+  }
+
+  .foodCard {
+    height: auto;
+  }
+}
