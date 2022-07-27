@@ -138,6 +138,12 @@
   background-color: #eeb528;
 }
 
+@media (max-width: 1000px) {
+  .foodCard h4 {
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 660px) {
   .filteringOptions {
     justify-content: flex-start;
@@ -182,9 +188,5 @@
 
   .foodCard {
     height: auto;
-  }
-
-  .foodCard h4 {
-    font-size: 18px;
   }
 }
