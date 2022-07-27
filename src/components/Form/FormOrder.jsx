@@ -1,10 +1,20 @@
-import { TextField } from '@mui/material';
+import { useState } from 'react';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import MoneyIcon from '@mui/icons-material/Money';
 import OrderCard from './OrderCard';
+import CustomerInfo from './CustomerInfo';
 import './form.css';
 
 export default function FormOrder({ order, setOpenForm, setOrder }) {
+
+    const [customerDetails, setCustomerDetails] = useState({
+        firstName: "",
+        lastName: "",
+        city: "",
+        street: "",
+        door: "",
+        phone: ""
+    });
 
     let total = 0;
     order.forEach(el => {
@@ -18,14 +28,7 @@ export default function FormOrder({ order, setOpenForm, setOrder }) {
                 <div className='formDetails'>
                     <h2>Thank you for your order!</h2>
                     <p>Please fill in your name and address so we can deliver your food as fast as we can.</p>
-                    <form>
-                        <TextField id="outlined-basic" label="First Name" variant="outlined" sx={{ color: 'yellow' }} />
-                        <TextField id="outlined-basic" label="Last Name" variant="outlined" />
-                        <TextField id="outlined-basic" label="City" variant="outlined" />
-                        <TextField id="outlined-basic" label="Street" variant="outlined" />
-                        <TextField id="outlined-basic" label="Door" variant="outlined" />
-                        <TextField id="outlined-basic" label="Phone Number" variant="outlined" />
-                    </form>
+                    <CustomerInfo customerDetails={customerDetails} setCustomerDetails={setCustomerDetails} />
                     <p>Please choose a payment method:</p>
                     <div className='paymentMethods'>
                         <CreditCardIcon sx={{ fontSize: 60 }} />
@@ -44,7 +47,7 @@ export default function FormOrder({ order, setOpenForm, setOrder }) {
                     </div>
                     <div className='formOptions'>
                         <button className='cancel' onClick={() => setOpenForm(false)}>Cancel</button>
-                        <button className='send' onClick={() => setOpenForm(false)}>Send</button>
+                        <button className='send' onClick={() => !customerDetails.some("") && setOpenForm(false)}>Send</button>
                     </div>
                 </div>
             </div>
