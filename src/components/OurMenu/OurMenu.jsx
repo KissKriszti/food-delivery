@@ -26,7 +26,7 @@ export default function OurMenu({ setOrder, dimensions }) {
         setIsSuccessMsg(true);
         setTimeout(() => {
             setIsSuccessMsg(false)
-        }, 2500)
+        }, 2000)
     };
 
     return (
