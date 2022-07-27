@@ -10,7 +10,7 @@ export default function OrderCard({ order, setOrder }) {
                 <div className='orderCard' key={item.id}>
                     <img src={item.image} alt="food" />
                     <span>{`${item.amount}X`}</span>
-                    <span>{item.name}</span>
+                    <span className='foodName'>{item.name}</span>
                     <span><strong>{`$${multipliedPrice}`}</strong></span>
                     <RemoveCircleIcon sx={{ fontSize: 16, cursor: 'pointer' }} onClick={() => setOrder(order.filter(ord => ord.id !== item.id))} />
                 </div>

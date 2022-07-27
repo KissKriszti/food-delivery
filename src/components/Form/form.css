@@ -28,6 +28,11 @@
   line-height: 60px;
 }
 
+.formContainer p {
+  margin: 15px 0;
+  line-height: 20px;
+}
+
 .formDetails h2 {
   color: #e6aa13;
 }
@@ -102,4 +107,32 @@
   border-radius: 10px;
   color: white;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 912px) {
+  .formOrder {
+    position: absolute;
+    height: auto;
+  }
+
+  .formContainer {
+    top: 0;
+    left: 0;
+    transform: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .orderDetails {
+    margin-top: 30px;
+    border-left: none;
+    width: 100%;
+  }
+
+  .formDetails {
+    width: 100%;
+  }
+
+  .foodName {
+    line-height: 20px;
+  }
 }
