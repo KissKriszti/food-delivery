@@ -9,7 +9,10 @@ export default function Checkout({ order, setOpenForm }) {
     }
 
     return (
-        <div className='checkout' onClick={() => setOpenForm(true)}>
+        <div className='checkout' onClick={() => {
+            setOpenForm(true)
+            window.scrollTo(0, 0)
+        }}>
             <ShoppingCartCheckoutIcon sx={{ fontSize: 25 }} />
             <span>{totalItems}</span>
         </div>

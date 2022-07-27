@@ -23,7 +23,7 @@ export default function FormOrder({ order, setOpenForm, setOrder }) {
     })
 
     return (
-        <section className='formOrder'>
+        <section className='formOrder' id="form">
             <div className='formContainer'>
                 <div className='formDetails'>
                     <h2>Thank you for your order!</h2>
